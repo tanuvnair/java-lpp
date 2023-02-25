@@ -57,11 +57,14 @@ public class LPP {
         for(int i = 0; i < numSource; i++) {
             for(int j = 0; j < numDestination; j++) {
                 if(i == numSource - 1 && j == 0) {
-                    System.out.print("Demand" + "\t");
+                    System.out.print("Demand" + "\t" + question[i][j] + "\t");
                     continue;
                 }
                 if(j == 0) {
                     System.out.print("S" + (i + 1) + "\t");
+                }
+                if(j == numDestination - 1 && i == numSource - 1) {
+                    continue;
                 }
                 System.out.print(question[i][j] + "\t");
             }
