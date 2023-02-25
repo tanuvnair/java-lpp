@@ -22,13 +22,15 @@ public class LPP {
 
         int[][] question = new int[numSource][numDestination];
 
+        // Takes input values of the X[i][j] elements.
         for(int i = 0; i < numSource - 1; i++) {
             for(int j = 0; j < numDestination - 1; j++) {
-                System.out.print("Enter x[" + (i + 1) + "][" + (j + 1) + "]: ");
+                System.out.print("Enter X[" + (i + 1) + "][" + (j + 1) + "]: ");
                 question[i][j] = in.nextInt();
             }
         }
 
+        // Takes input values of the demand and supply row and column.
         for(int i = 0; i < numSource - 1; i++) {
             System.out.println("Enter Supply from S" + (i + 1) +": ");
             question[i][numDestination - 1] = in.nextInt();
@@ -39,7 +41,7 @@ public class LPP {
             question[numSource - 1][i] = in.nextInt();
         }
 
-
+        // Prints out the question
         System.out.println("Question:");
         for(int i = 0; i < numDestination + 1; i++) {
             if(i == 0) {
