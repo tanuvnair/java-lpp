@@ -2,14 +2,8 @@ import java.util.*;
 
 public class LPP {
     static Scanner in = new Scanner(System.in);
-
     public static void main(String args[]) {
         transportation();
-    }
-
-    static void typeOfQuestion() {
-        System.out.println("Enter '1' if it is a simplex question or '2' if it is an transportation question.");
-        int userInput = in.nextInt();
     }
 
     static void transportation() {
